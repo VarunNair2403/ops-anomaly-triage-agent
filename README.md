@@ -1,10 +1,8 @@
-# Ops Anomaly Triage Agent
+## Overview
 
-An internal AI agent that scans recent operational incidents from a SQL database, summarizes patterns, classifies overall severity (low/medium/high), and triggers Slack/Jira alerts so ops and engineering teams can triage faster.
+Ops Anomaly Triage Agent is a small internal AI agent that scans recent operational incidents from a SQL database, summarizes patterns, classifies overall severity, and triggers alerts to downstream tools (Slack now, Jira next). It is meant to mimic the kind of self‑service AI agents that infra and SRE teams use to reduce noise and speed up incident response.
 
-## What it does
-
-- Pulls recent incidents from a SQLite/Postgres database
-- Uses an LLM to summarize patterns and classify severity
-- Sends a formatted alert to Slack (and optionally creates Jira tickets)
-- Exposes a simple CLI (and later API) to run triage on-demand or on a schedule
+Today, the project includes:
+- A SQLite schema and seed script for synthetic incident data
+- A Python service that can read incidents and call an LLM
+- A basic agent loop that can be extended with notifications, configs, and evaluations
