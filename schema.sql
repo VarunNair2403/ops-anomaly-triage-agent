@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS incidents (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  desk TEXT NOT NULL,
+  type TEXT NOT NULL,
+  amount REAL NOT NULL,
+  status TEXT NOT NULL,
+  created_at TEXT NOT NULL
+);
